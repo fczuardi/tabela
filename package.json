@@ -3,9 +3,13 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node_modules/react-native/packager/packager.sh"
+    "start": "node_modules/react-native/packager/packager.sh",
+    "watch": "watchify -e src/index.ios.js -o dist/index.ios.js -t babelify --no-bundle-external -s TabelaApp"
   },
   "dependencies": {
     "react-native": "^0.10.1"
+  },
+  "devDependencies": {
+    "babelify": "^6.3.0"
   }
 }
